@@ -1,3 +1,31 @@
+# Platoniq's Developer Guide to the Engine
+
+## Installation
+
+- **Install MongoDB**
+  - Paste this in your terminal to install MongoDB:
+    ```
+    wget -qO - https://www.mongodb.org/static/pgp/server-4.4.asc | sudo apt-key add -
+    ```
+  - More info here https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+- **Install gems** running `bundle install`
+
+## Development
+
+- Run the engine with `bin/rails server`
+- Add this entry to your hosts file (usually `/etc/hosts`):
+  ```
+  # Locomotive CMS Engine
+  127.0.0.1 locomotive.local
+  ```
+- Go to http://locomotive.local:3000
+- Create an account
+- Create a site and copy its handle and info to the `config/deploy.yml` file in your site's repository
+- Visit http://locomotive.local:3000/locomotive/your-site-handle/developers and copy the api_key to the `config/deploy.yml` file in your site's repository (you'll have more instructions when visiting that page)
+
+------------
+
 # Locomotive
 
 [![Build Status](https://travis-ci.com/locomotivecms/engine.svg?branch=master)](https://travis-ci.com/locomotivecms/engine) [![Code Climate](https://codeclimate.com/github/locomotivecms/engine/badges/gpa.svg)](https://codeclimate.com/github/locomotivecms/engine) [![Coverage Status](https://img.shields.io/coveralls/locomotivecms/engine.svg)](https://coveralls.io/r/locomotivecms/engine?branch=master) [![Join the chat at https://gitter.im/locomotivecms/engine](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/locomotivecms/engine?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
